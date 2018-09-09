@@ -8,5 +8,8 @@
     "start": "node startup.js"
   },
   "author": "Christian Soler",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  }
 }
