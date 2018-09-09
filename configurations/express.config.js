@@ -45,7 +45,7 @@ class ExpressConfig {
     }
   }
 
-  async setApiRoute(route, method, cb) {
+  async setApiRoute({method, route, cb}) {
     try {
       this.api[method](route, cb);
     } catch (e) {

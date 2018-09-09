@@ -6,7 +6,8 @@ const settings = {
     PORT: (process.env.PORT || 3000),
     SECRET: (process.env.SECRET || 'TOP_SECRET'),
     IS_PRODUCTION: (process.env.IS_PRODUCTION || false)
-  }
+  },
+  base_url: 'http://www.xboxachievements.com'
 };
 
 module.exports = settings;
