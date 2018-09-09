@@ -1,15 +1,17 @@
 'use strict';
 
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
-  entry: './public/scripts/application.js',
+  entry: './public/scripts/core/app.js',
   output: {
     path: path.resolve(__dirname, 'public/scripts'),
     filename: 'application.bundle.js'
   },
   mode: 'production',
+  performance: {
+    hints: false
+  },
   module: {
     rules: [
       {
@@ -18,7 +20,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: ['angularjs-annotate']
           }
         }
       }

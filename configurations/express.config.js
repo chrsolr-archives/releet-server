@@ -24,6 +24,10 @@ class ExpressConfig {
       this.app.use(body_parser.urlencoded({ extended: true }));
       this.app.use(body_parser.json());
 
+      this.app.use('/libs', express.static(path.resolve('./node_modules')));
+      this.app.use('/scripts', express.static(path.resolve('./public/scripts')));
+      this.app.use('/views', express.static(path.resolve('./public/views')));
+
       this.app.use('/api', this.api);
       this.app.use(cors());
 
@@ -31,7 +35,7 @@ class ExpressConfig {
 
       this.app.listen(PORT, (err) => {
         if (err) {
-          throw err;
+          console.error(err);
         } else {
           console.info('Releet server running at port:', PORT);
         }
