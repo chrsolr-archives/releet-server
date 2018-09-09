@@ -5,11 +5,30 @@
   "main": "startup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node startup.js"
+    "start": "node startup.js",
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "build": "webpack"
   },
   "author": "Christian Soler",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.5.0"
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.5.0",
+    "morgan": "^1.9.0",
+    "webpack": "^4.17.2",
+    "webpack-command": "^0.4.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.2.13",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   }
 }

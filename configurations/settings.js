@@ -4,7 +4,8 @@ const settings = {
   server: {
     DB_URL: process.env.DB_URL,
     PORT: (process.env.PORT || 3000),
-    secrets: (process.env.SECRET || 'TOP_SECRET')
+    SECRET: (process.env.SECRET || 'TOP_SECRET'),
+    IS_PRODUCTION: (process.env.IS_PRODUCTION || false)
   }
 };
 
