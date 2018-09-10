@@ -10,7 +10,7 @@ const settings = {
   },
   urls: {
     base_url,
-    browse_url: (letter, page) => `${base_url}/browsegames/xbox-one/${letter}/${page}`
+    browse_url: (letter = 'a', page = 1) => `${base_url}/browsegames/xbox-one/${letter}/${page}`
   }
 };
 

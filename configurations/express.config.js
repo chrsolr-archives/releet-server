@@ -45,9 +45,9 @@ class ExpressConfig {
     }
   }
 
-  async setApiRoute({method, route, cb}) {
+  async setApiRoute({method, route, handler}) {
     try {
-      this.api[method](route, cb);
+      this.api[method](route, handler);
     } catch (e) {
       console.error(e);
     }
