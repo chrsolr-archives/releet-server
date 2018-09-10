@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/libs/angular_material/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="/libs/angular-material/angular-material.min.css">
 
     <style>
         [ng\:cloak],
@@ -19,7 +20,19 @@
 </head>
 <body ng-cloak>
 
-    <div ng-view></div>
+<div layout="column" layout-fill>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 md-truncate flex>Releet API</h2>
+            <md-button>
+                Right Bar Button
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding>
+        <div ng-view></div>
+    </md-content>
+</div>
 
 <script src="/scripts/application.bundle.js"></script>
 
